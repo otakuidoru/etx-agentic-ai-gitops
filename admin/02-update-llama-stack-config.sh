@@ -46,7 +46,7 @@ data:
   run.yaml: |
     # Llama Stack configuration
     version: '2'
-    image_name: vllm
+    image_name: rh
     apis:
     - inference
     - tool_runtime
@@ -83,10 +83,10 @@ data:
         config:
           persistence_store:
             type: sqlite
-            db_path: \${env.SQLITE_STORE_DIR:=~/.llama/distributions/starter}/agents_store.db
+            db_path: \${env.SQLITE_STORE_DIR:=~/.llama/distributions/rh}/agents_store.db
           responses_store:
             type: sqlite
-            db_path: \${env.SQLITE_STORE_DIR:=~/.llama/distributions/starter}/responses_store.db
+            db_path: \${env.SQLITE_STORE_DIR:=~/.llama/distributions/rh}/responses_store.db
     server:
       port: 8321
     tools:
